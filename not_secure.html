@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy error</title>
+    <style>
+        body {
+            background-color: #202124;
+            color: #bdc1c6;
+            font-family: 'Roboto', sans-serif;
+            font-size: 75%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main-frame {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+        }
+        .icon {
+            width: 48px;
+            height: 48px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='48' width='48' viewBox='0 0 48 48'%3E%3Cpath fill='%23ea4335' d='M24 4C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm2 30h-4v-4h4v4zm0-8h-4V14h4v12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 16px;
+            line-height: 32px;
+            color: #e8eaed;
+        }
+        p {
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+        }
+        button {
+            background-color: transparent;
+            border: 1px solid #5f6368;
+            border-radius: 4px;
+            color: #8ab4f8;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 16px;
+            text-align: center;
+            outline: none;
+        }
+        button:hover {
+            background-color: rgba(138, 180, 248, 0.08);
+        }
+        button.primary {
+            background-color: #8ab4f8;
+            color: #202124;
+            border: none;
+        }
+        button.primary:hover {
+            background-color: #93bbf9;
+        }
+        .details-button {
+            border: 1px solid #5f6368;
+            color: #8ab4f8;
+            background: transparent;
+        }
+        .error-code {
+            color: #5f6368;
+            font-size: 12px;
+            margin-top: 24px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-frame">
+        <div class="icon"></div>
+        <h1>Your connection is not private</h1>
+        <p>Attackers might be trying to steal your information from <strong>example.com</strong> (for example, passwords, messages, or credit cards). <a href="#" style="color: #8ab4f8; text-decoration: none;">Learn more</a></p>
+        <div class="buttons">
+            <button class="details-button">Advanced</button>
+            <button class="primary" onclick="window.history.back()">Back to safety</button>
+        </div>
+        <div class="error-code">NET::ERR_CERT_AUTHORITY_INVALID</div>
+    </div>
+</body>
+</html>
